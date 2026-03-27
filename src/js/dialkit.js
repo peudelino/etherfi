@@ -24,7 +24,7 @@ function HeroControls() {
 
   useEffect(() => {
     const el = document.querySelector('.nav');
-    if (el) el.style.top = `${navTop}px`;
+    if (el) el.style.paddingTop = `${navTop}px`;
   }, [navTop]);
 
   useEffect(() => {
