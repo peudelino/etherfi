@@ -63,7 +63,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 100px;
   min-height: 100vh;
   --copy-offset: -26px;
   --card-offset: -17px;
@@ -71,12 +71,11 @@
 
 /* Copy block */
 .hero__copy {
-  max-width: 520px;
   transform: translateY(-29px);
 }
 
 .hero__headline {
-  font-size: 90px;
+  font-size: 80px;
   font-weight: 500;
   letter-spacing: var(--tracking-tight);
   line-height: var(--leading-tight);
