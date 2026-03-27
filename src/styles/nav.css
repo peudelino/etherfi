@@ -55,10 +55,10 @@
 .nav--scrolled::before {
   content: '';
   position: absolute;
-  top: -20px;
+  top: -60px;
   left: 0;
   right: 0;
-  height: 20px;
+  height: 60px;
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
