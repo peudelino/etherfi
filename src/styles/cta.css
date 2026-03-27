@@ -1,0 +1,300 @@
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+
+.final-cta {
+  background: var(--color-bg);
+  padding: var(--section-padding) 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Large background word */
+.final-cta::before {
+  content: 'borderless';
+  position: absolute;
+  font-size: 200px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Lime glow behind phone */
+.final-cta__glow {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(89, 106, 208, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.final-cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left — copy */
+.final-cta__headline {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--color-text);
+  margin-bottom: 40px;
+}
+
+.final-cta__badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  min-width: 150px;
+}
+
+.store-badge:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.store-badge__icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.store-badge__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.store-badge__sub {
+  font-size: 9px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.store-badge__main {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.final-cta__fine-print {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+/* Right — phone mockup */
+.final-cta__phone {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.cta-phone {
+  width: 280px;
+  background: #0D0D0D;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 28px 20px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+  animation: phoneFloat 6s ease-in-out infinite;
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-16px) rotate(1deg); }
+}
+
+.cta-phone__balance-label {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+.cta-phone__balance {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+/* Asset pills */
+.cta-phone__assets {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  padding-bottom: 4px;
+}
+
+.cta-asset-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.cta-asset-pill__name {
+  font-size: 9px;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  margin-bottom: 3px;
+}
+
+.cta-asset-pill__amount {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+/* Mini card */
+.cta-phone__card {
+  height: 100px;
+  border-radius: 12px;
+  background: var(--gradient-card);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.cta-phone__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    85deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+}
+
+.cta-phone__card-logo {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-phone__card-number {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Cashback notification */
+.cta-phone__notification {
+  background: var(--color-accent-dim);
+  border: 1px solid rgba(89, 106, 208, 0.20);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-phone__notification-icon {
+  font-size: 16px;
+}
+
+.cta-phone__notification-text {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.cta-phone__notification-value {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 900px) {
+  .final-cta__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 48px;
+  }
+
+  .final-cta__badges {
+    justify-content: center;
+  }
+
+  .final-cta__headline {
+    font-size: 44px;
+  }
+
+  .final-cta__phone {
+    order: -1;
+  }
+
+  .final-cta::before {
+    font-size: 80px;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .final-cta {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .final-cta__headline {
+    font-size: 36px;
+  }
+
+  .cta-phone {
+    width: 240px;
+  }
+}

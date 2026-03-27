@@ -1,0 +1,327 @@
+/* ============================================================
+   THREE-STEP ONBOARDING
+   ============================================================ */
+
+.onboarding {
+  background: var(--color-bg);
+  padding: var(--section-padding) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.onboarding__header {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+/* Steps grid */
+.onboarding__steps {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Step card */
+.step-card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media area — phone mockup at top */
+.step-card__media {
+  flex: 0 0 380px;
+  background: #0D0D0E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Content area below */
+.step-card__content {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-card__title {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step-card__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.step-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  width: fit-content;
+}
+
+.step-card__badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+}
+
+.step-card__body {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: var(--leading-body);
+}
+
+/* Phone mockup */
+.phone-mockup {
+  width: 200px;
+  height: 340px;
+  margin: 24px auto;
+  background: #0D0D0D;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.6);
+}
+
+.phone-mockup__screen {
+  width: 100%;
+  height: 100%;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Phone screen — Step 1: Sign up */
+.phone-screen-1 .screen-field {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  position: relative;
+}
+
+.phone-screen-1 .screen-field--active {
+  border-color: var(--color-accent);
+}
+
+.phone-screen-1 .screen-field__cursor {
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background: var(--color-accent);
+  animation: cursorBlink 1.1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.phone-screen-1 .screen-btn {
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.phone-screen-1 .screen-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.phone-screen-1 .screen-sub {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+}
+
+/* Phone screen — Step 2: Card selection */
+.phone-screen-2 .card-option {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px;
+  flex: 1;
+}
+
+.phone-screen-2 .card-option.selected {
+  border-color: var(--color-accent);
+  background: var(--color-accent-dim);
+}
+
+.phone-screen-2 .card-options-row {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.phone-screen-2 .card-option__type {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.phone-screen-2 .card-option__sub {
+  font-size: 8px;
+  color: var(--color-text-tertiary);
+}
+
+.phone-screen-2 .card-option__mini-card {
+  height: 48px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.phone-screen-2 .card-option.selected .card-option__mini-card {
+  background: var(--gradient-card);
+}
+
+.phone-screen-2 .card-option:not(.selected) .card-option__mini-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phone-screen-2 .screen-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+/* Phone screen — Step 3: Cashback */
+.phone-screen-3 .tx-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.phone-screen-3 .tx-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+}
+
+.phone-screen-3 .tx-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.phone-screen-3 .tx-name {
+  flex: 1;
+  color: var(--color-text-secondary);
+}
+
+.phone-screen-3 .tx-amount {
+  color: var(--color-text-tertiary);
+}
+
+.phone-screen-3 .tx-cashback {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.phone-screen-3 .screen-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.phone-screen-3 .cashback-total {
+  background: var(--color-accent-dim);
+  border: 1px solid rgba(89, 106, 208, 0.15);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone-screen-3 .cashback-total span:last-child {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .onboarding__steps {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .step-card__media {
+    flex: 0 0 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-card__media {
+    flex: 0 0 280px;
+  }
+
+  .phone-mockup {
+    width: 160px;
+    height: 280px;
+  }
+
+  .onboarding {
+    padding: var(--section-padding-mobile) 0;
+  }
+}

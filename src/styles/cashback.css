@@ -1,0 +1,201 @@
+/* ============================================================
+   CASHBACK SECTION
+   ============================================================ */
+
+.cashback {
+  background: var(--color-bg);
+  padding: var(--section-padding) 0;
+  overflow: hidden;
+}
+
+.cashback__inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left column */
+.cashback__headline {
+  font-size: 56px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.cashback__body {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-body);
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+.cashback__features {
+  margin-bottom: 32px;
+}
+
+.cashback__cta {
+  font-size: 14px;
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--transition-base);
+}
+
+.cashback__cta:hover {
+  gap: 10px;
+}
+
+/* Right column — phone with transaction feed */
+.cashback__phone {
+  display: flex;
+  justify-content: center;
+}
+
+.cashback__phone-wrap {
+  width: 260px;
+  background: #0D0D0D;
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 16px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.cashback__phone-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+/* Transaction feed */
+.tx-feed {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.tx-feed__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: feedScroll 14s linear infinite;
+}
+
+@keyframes feedScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.tx-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.tx-row__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.tx-row__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tx-row__merchant {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tx-row__date {
+  font-size: 9px;
+  color: var(--color-text-tertiary);
+  margin-top: 2px;
+}
+
+.tx-row__amounts {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.tx-row__spent {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+}
+
+.tx-row__cashback {
+  font-size: 10px;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+/* Summary bar */
+.cashback__phone-summary {
+  margin-top: 16px;
+  background: var(--color-accent-dim);
+  border: 1px solid rgba(89, 106, 208, 0.15);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cashback__phone-summary-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.cashback__phone-summary-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 900px) {
+  .cashback__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .cashback__headline {
+    font-size: 40px;
+  }
+
+  .cashback__phone {
+    order: -1;
+  }
+
+  .cashback {
+    padding: var(--section-padding-mobile) 0;
+  }
+}
