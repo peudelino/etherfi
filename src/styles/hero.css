@@ -61,7 +61,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 80px;
   align-items: center;
   padding-top: 100px;
   min-height: 100vh;
@@ -71,11 +71,12 @@
 
 /* Copy block */
 .hero__copy {
+  max-width: 520px;
   transform: translateY(-29px);
 }
 
 .hero__headline {
-  font-size: 80px;
+  font-size: var(--text-6xl);
   font-weight: 500;
   letter-spacing: var(--tracking-tight);
   line-height: var(--leading-tight);
