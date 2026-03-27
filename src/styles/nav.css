@@ -52,6 +52,18 @@
   border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 
+.nav--scrolled::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 .nav--has-bar {
   top: 37px;
 }
