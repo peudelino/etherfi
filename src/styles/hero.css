@@ -61,7 +61,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 40px;
   align-items: center;
   padding-top: 60px;
   min-height: 100vh;
@@ -76,7 +76,7 @@
 }
 
 .hero__headline {
-  font-size: var(--text-6xl);
+  font-size: 90px;
   font-weight: 500;
   letter-spacing: var(--tracking-tight);
   line-height: var(--leading-tight);
@@ -141,7 +141,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 620px;
   transform: translateY(-26px);
 }
 
@@ -153,8 +153,8 @@
 }
 
 .hero__card {
-  width: 340px;
-  height: 214px;
+  width: 420px;
+  height: 264px;
   border-radius: 18px;
   background: linear-gradient(135deg, #34A3ED 0%, #6B52C8 55%, #8165F5 100%);
   position: relative;
