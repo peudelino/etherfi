@@ -5,11 +5,11 @@ import 'dialkit/styles.css';
 
 function HeroControls() {
   const { copyTop, cardTop, navTop, subheadGap, ctasGap } = useDialKit('Hero', {
-    copyTop: [-29, -200, 200, 1],
-    cardTop: [-26, -200, 200, 1],
+    copyTop: [-63, -200, 200, 1],
+    cardTop: [-56, -200, 200, 1],
     navTop: [44, -50, 100, 1],
-    subheadGap: [24, 0, 120, 1],
-    ctasGap: [32, 0, 120, 1],
+    subheadGap: [32, 0, 120, 1],
+    ctasGap: [40, 0, 120, 1],
   });
 
   useEffect(() => {

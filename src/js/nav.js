@@ -18,13 +18,13 @@ export function initNav() {
     if (y > 20) {
       nav.classList.add('nav--scrolled');
       nav.classList.remove('nav--has-bar');
-      nav.style.top = '0';
+      nav.style.top = '';
     } else {
       nav.classList.remove('nav--scrolled');
       if (announcementBar && announcementBar.style.height !== '0px') {
         nav.classList.add('nav--has-bar');
-        nav.style.top = '';
       }
+      nav.style.top = '';
     }
 
     // Hide scroll indicator after user scrolls
@@ -47,7 +47,7 @@ export function initNav() {
       setTimeout(() => {
         announcementBar.style.height = '0';
         announcementBar.style.padding = '0';
-        nav.style.top = '0';
+        nav.style.top = '';
         nav.classList.remove('nav--has-bar');
       }, 200);
     });
